@@ -1,12 +1,12 @@
 import pandas as pd
 import os
 
-# Coloque caimnho da pasta aonde estão os arquivos
+# Coloque caminho da pasta aonde estão os arquivos
 dir_path = "Caminho da pasta"
 
 dfs = []
 
-# Caso esteja em csv, você precisará trocar o .xlsx por .csv
+# Leitur e unificação dos arquivos
 for planilha in os.listdir(dir_path):
     if planilha.endswith('.xlsx') or planilha.endswith('.xls'):
         df = pd.read_excel(os.path.join(dir_path, planilha))
